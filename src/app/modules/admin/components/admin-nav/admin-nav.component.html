@@ -1,0 +1,32 @@
+
+
+
+<div *ngIf="isAdminLoggedIn">
+
+<div class="navbar-noauth" >
+  <mat-toolbar >
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Quiz Application</span>
+    <span class="example-spacer"></span>
+      <button mat-button routerLink="/admin/dashboard" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    Dashboard
+    </button>
+
+    <button mat-button routerLink="/admin/addquestion" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    Add Questions
+    </button>
+    <button mat-button routerLink="/signup" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      Create Quiz
+    </button>
+    <button mat-button routerLink="/signup" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      Analytics
+    </button>
+    <button mat-button  routerLink="/login"  (click)="logout()" class="example-icon" aria-label="Example icon-button with share icon">
+      Logout
+    </button>
+  </mat-toolbar>
+
+</div>
+</div>

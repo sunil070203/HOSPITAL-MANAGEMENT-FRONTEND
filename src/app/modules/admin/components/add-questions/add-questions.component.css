@@ -1,0 +1,66 @@
+/* Container: center the form in page */
+.add-question-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 64px); /* adjust for navbar */
+  background-color: #f4f6fb;
+  padding-top: 40px;
+}
+
+/* Card */
+.add-question-card {
+  width: 600px; /* slightly bigger to fit rows */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  background: #fff;
+}
+
+/* Title */
+.add-question-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #0a0a70;
+}
+
+/* Rows */
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+/* Fields */
+.full-width {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.half-width {
+  flex: 1;
+}
+
+/* Submit button */
+.add-question-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #0a0a70 !important;
+  color: white !important;
+  transition: background-color 0.3s ease;
+}
+
+.add-question-btn:hover {
+  background-color: #13138d !important;
+}
+
+.add-question-btn:disabled {
+  background-color: #c0c0c0 !important;
+  color: #666 !important;
+  cursor: not-allowed;
+}

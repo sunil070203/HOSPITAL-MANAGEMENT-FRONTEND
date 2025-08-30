@@ -1,0 +1,54 @@
+<div *ngIf="!isUserLoggedIn && !isAdminLoggedIn">
+  <div class="navbar-noauth" >
+  <mat-toolbar >
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Quiz Application</span>
+    <span class="example-spacer"></span>
+    <button mat-button routerLink="/signup" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      Signup
+    </button>
+    <button mat-button routerLink="/login" class="example-icon" aria-label="Example icon-button with share icon">
+      Login
+    </button>
+  </mat-toolbar>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div *ngIf="isUserLoggedIn">
+<div class="navbar-noauth" >
+  <mat-toolbar >
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Quiz Application</span>
+    <span class="example-spacer"></span>
+         <button mat-button routerLink="/signup" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    Dashboard
+    </button>
+    <button mat-button routerLink="/signup" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    Quizs
+    </button>
+    <button mat-button routerLink="/signup" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      My Activites
+    </button>
+   <button mat-button  routerLink="/login"  (click)="logout()" class="example-icon" aria-label="Example icon-button with share icon">
+      Logout
+    </button>
+
+  </mat-toolbar>
+
+</div>
+</div>
+

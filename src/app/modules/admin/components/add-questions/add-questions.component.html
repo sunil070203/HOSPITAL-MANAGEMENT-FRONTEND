@@ -1,0 +1,71 @@
+<app-admin-nav></app-admin-nav>
+
+<div class="add-question-container">
+  <mat-card class="add-question-card" appearance="outlined">
+    <mat-card-title class="add-question-title">Add New Question</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
+
+        <!-- Question Title full width -->
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Question Title</mat-label>
+          <input matInput formControlName="questionTitle" placeholder="Enter question" />
+        </mat-form-field>
+
+        <!-- Options Row 1 -->
+        <div class="form-row">
+          <mat-form-field class="half-width" appearance="outline">
+            <mat-label>Option 1</mat-label>
+            <input matInput formControlName="option1" />
+          </mat-form-field>
+
+          <mat-form-field class="half-width" appearance="outline">
+            <mat-label>Option 2</mat-label>
+            <input matInput formControlName="option2" />
+          </mat-form-field>
+        </div>
+
+        <!-- Options Row 2 -->
+        <div class="form-row">
+          <mat-form-field class="half-width" appearance="outline">
+            <mat-label>Option 3</mat-label>
+            <input matInput formControlName="option3" />
+          </mat-form-field>
+
+          <mat-form-field class="half-width" appearance="outline">
+            <mat-label>Option 4</mat-label>
+            <input matInput formControlName="option4" />
+          </mat-form-field>
+        </div>
+
+        <!-- Correct Answer full width -->
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Correct Answer</mat-label>
+          <input matInput formControlName="correctAnswer" />
+        </mat-form-field>
+
+        <!-- Category & Difficulty Row -->
+        <div class="form-row">
+          <mat-form-field class="half-width" appearance="outline">
+            <mat-label>Category</mat-label>
+            <mat-select formControlName="category">
+              <mat-option *ngFor="let c of categories" [value]="c">{{ c }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="half-width" appearance="outline">
+            <mat-label>Difficulty Level</mat-label>
+            <mat-select formControlName="difficultyLevel">
+              <mat-option *ngFor="let d of difficultyLevels" [value]="d">{{ d }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <!-- Submit button -->
+        <button mat-flat-button type="submit" class="add-question-btn" [disabled]="questionForm.invalid">
+          Add Question
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
