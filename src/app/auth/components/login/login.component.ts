@@ -18,7 +18,7 @@ import { FooterComponent } from "../../../modules/user/componets/footer/footer.c
 })
 export class LoginComponent  {
   loginForm!: FormGroup;
-  hidePassword = true; // This controls password visibility
+  hidePassword = true;
   
   
   

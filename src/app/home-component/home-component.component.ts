@@ -29,7 +29,6 @@ export class HomeComponentComponent {
 
         const url = event.urlAfterRedirects;
 
-        // Hide hero section on login/signup pages OR if logged in
         if (url.includes('/login') || url.includes('/signup')) {
           this.showHeroSection = false;
         } else {
