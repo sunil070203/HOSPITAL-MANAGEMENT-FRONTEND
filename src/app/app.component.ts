@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponentComponent } from './home-component/home-component.component';
+import { HerosectionComponent } from './auth/components/login/herosection/herosection.component';
 
 
 

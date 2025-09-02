@@ -7,11 +7,12 @@ import { HomeComponentComponent } from "../../../home-component/home-component.c
 import { AuthService } from '../../services/auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { StorageService } from '../../services/storage.service';
+import { FooterComponent } from "../../../modules/user/componets/footer/footer.component";
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, MaterialModule, HomeComponentComponent],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, MaterialModule, HomeComponentComponent, FooterComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -56,10 +57,10 @@ export class LoginComponent  {
             StorageService.saveToken(res.jwt);
     
             if (StorageService.isAdminLoggedIn()) {
-              this.router.navigate(['/admin/dashboard']);
+              this.router.navigateByUrl('admin/admindashboard');
             } 
             else if (StorageService.isUserLoggedIn()) {
-              this.router.navigate(['/user/dashboard']);
+              this.router.navigateByUrl('user/dashboard');
             }
             this.snackbar.open('Login Successful', 'Close', { duration: 5000 });
            
